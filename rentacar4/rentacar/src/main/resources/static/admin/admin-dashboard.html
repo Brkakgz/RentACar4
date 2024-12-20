@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Add New Car</h2>
+            <form id="addCarForm">
+                <label for="carBrand">Brand:</label>
+                <input type="text" id="carBrand" required minlength="2">
+
+                <label for="carModel">Model:</label>
+                <input type="text" id="carModel" required minlength="2">
+
+                <label for="carColor">Color:</label>
+                <input type="text" id="carColor" required>
+
+                <label for="carDailyPrice">Daily Price:</label>
+                <input type="number" id="carDailyPrice" required min="1">
+
+                <label for="carAvailableCount">Available Count:</label>
+                <input type="number" id="carAvailableCount" required min="1">
+
+                <button type="button" onclick="addCar()">Add Car</button>
+            </form>
+        </section>
+        <section>
+            <h2>Manage Cars</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Color</th>
+                        <th>Daily Price</th>
+                        <th>Available Count</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="carTableBody">
+                    <!-- Arabalar dinamik olarak yüklenecek -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="../js/admin.js"></script>
+</body>
+</html>
